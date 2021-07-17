@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassmatesInfo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f54cf35d76.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            margin-left: 220px;
+            margin-bottom: 200px;
+        }
+        body{
+            background-image: url(https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+            background-size: cover;
+        }
+        .person-grid{
+            font-family: tahoma;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid white;
+            margin-top: 184px;
+        }
+        .person-grid:before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all 0.3s ease 0s;
+        }
+        .person-grid:hover:before{
+            background-color: rgba(0,0,0,0.75);
+        }
+        .person-grid .person-image{
+            overflow:hidden;
+            position: relative;
+        }
+        .person-grid .person-image a{
+            display: block;
+        }
+        .person-grid .person-image img{
+            width: 100%;
+            height: auto;
+        }
+        .person-grid .info{
+            width: 100%;
+            padding: 30px 0;
+            margin: 0;
+            list-style: none;
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+        }
+        .person-grid .info li{
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(300%);
+            transition: all 0.5s ease 0s;
+        }
+        .person-grid .info li:nth-child(2){
+            transition-delay: 0.05s;
+        }     
+        
+        .person-grid .info li:nth-child(3){
+            transition-delay: 0.13s;
+        }  
+        
+        .person-grid .info li:nth-child(4){
+            transition-delay: 0.17s;
+        }  
+        .person-grid:hover .info li{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .person-grid .info li a{
+            color: #000;
+            background-color: #fff;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            margin: 0 2px 10px;
+            border-radius: 50%;
+            display: block;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+        .person-grid .info li a:hover{
+            color: white;
+            background-color: orange;
+        }
+        .person-grid .person-content{
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+            background-color: white;
+        }
+        .person-grid .title{
+            font-size: 20px;
+            font-weight: 500;
+            margin: 10px 0px 15px 0px;
+        }
+        h1{
+            color: maroon;
+            margin-left: 160px;
+            margin-top: 100px;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+        table, caption{
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="headtitle">
+        <h1>STUDENT INFORMATION</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="person-grid">
+                    <div class="person-image">
+                        <a href="">
+                        <img src="https://images.unsplash.com/photo-1551024739-78e9d60c45ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="Person1">
+                        </a>
+                    </div>
+                    <div class="person-content">
+                        <h3 class="title">
+                            <a href="">Erica Matthews</a>
+                        </h3>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            <a href="#table" data-tip="quick-info">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="col-sm-3">
+                <div class="person-grid">
+                    <div class="person-image">
+                        <a href="">
+                        <img src="https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Person2">
+                        </a>
+                    </div>
+                    <div class="person-content">
+                        <h3 class="title">
+                            <a href="">Dalton Gomez</a>
+                        </h3>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            <a href="#table" data-tip="quick-info">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-sm-3">
+                <div class="person-grid">
+                    <div class="person-image">
+                        <a href="">
+                        <img src="https://images.unsplash.com/photo-1574722772849-7b249c18a2fd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Person3">
+                        </a>
+                    </div>
+                    <div class="person-content">
+                        <h3 class="title">
+                            <a href="">Arjun Varma</a>
+                        </h3>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            <a href="#table" data-tip="quick-info">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             
+            <div class="row">
+            <div class="col-sm-3">
+                <div class="person-grid">
+                    <div class="person-image">
+                        <a href="">
+                        <img src="https://images.unsplash.com/photo-1568739253582-afa48fbcea47?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGdpcmxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Person4">
+                        </a>
+                    </div>
+                    <div class="person-content">
+                        <h3 class="title">
+                            <a href="">Hannah Forbes</a>
+                        </h3>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            <a href="#table" data-tip="quick-info">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-sm-3">
+                <div class="person-grid">
+                    <div class="person-image">
+                        <a href="">
+                        <img src="https://images.unsplash.com/photo-1597586124394-fbd6ef244026?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdpcmxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Person5">
+                        </a>
+                    </div>
+                    <div class="person-content">
+                        <h3 class="title">
+                            <a href="">Indy Davis</a>
+                        </h3>
+                    </div>
+                    <ul class="info">
+                        <li>
+                            <a href="#table" data-tip="quick-info">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+
+
+
+            <div class="col-sm-3">
+            <div class="person-grid">
+                <div class="person-image">
+                    <a href="">
+                    <img src="https://images.unsplash.com/photo-1609613413578-a622d3f9a6dd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Person6">
+                    </a>
+                </div>
+                <div class="person-content">
+                    <h3 class="title">
+                        <a href="">Jacob Williams</a>
+                    </h3>
+                </div>
+                <ul class="info">
+                    <li>
+                        <a href="#table" data-tip="quick-info">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+    </div>
+<br><br><br><br><br><br>
+    <table id="table" style="width: 100%;">
+        <tr>
+              <th>Firstname</th>
+              <th>Lastname</th> 
+              <th>Age</th>
+              <th>CGPA</th>
+            </tr>
+            <tr>
+              <td>Erica</td>
+              <td>Matthews</td>
+              <td>22</td>
+              <td>9.02</td>
+            </tr>
+            <tr>
+              <td>Dalton</td>
+              <td>Gomez</td>
+              <td>27</td>
+              <td>8.8</td>
+            </tr>
+            <tr>
+              <td>Arjun</td>
+              <td>Varma</td>
+              <td>29</td>
+              <td>7.11</td>
+            </tr>
+            <tr>
+                <td>Hannah</td>
+                <td>Forbes</td>
+                <td>25</td>
+                <td>6.92</td>
+              </tr>
+              <tr>
+                <td>Indy</td>
+                <td>David</td>
+                <td>19</td>
+                <td>9.79</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Williams</td>
+                <td>30</td>
+                <td>7.1</td>
+              </tr>
+            </table>
+</body>
+</html>
